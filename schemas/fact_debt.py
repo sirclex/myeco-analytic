@@ -19,6 +19,12 @@ class FactDebtCreate(FactDebtBase):
 class FactDebtUpdate(FactDebtBase):
     id: int
 
+class PendingDebtResponse(BaseModel):
+    identity: Optional[str] = None
+    amount: Optional[float] = None
+    class Config:
+        from_attributes = True
+
 class FactDebtResponse(FactDebtBase):
     id: Optional[int]
     issue_at: Optional[datetime] = None
