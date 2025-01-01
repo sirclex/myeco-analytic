@@ -12,5 +12,4 @@ app.add_middleware(
     CORSMiddleware, allow_origins=origins, allow_methods=["*"], allow_headers=["*"]
 )
     
-# app.include_router(api_router, prefix="/myeco", dependencies=[Security(get_api_key)])
-app.include_router(api_router, prefix="/myeco/analytic")
+app.include_router(api_router, prefix="/myeco/analytic", dependencies=[Security(get_api_key)])
