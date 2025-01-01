@@ -23,3 +23,7 @@ topics = [
 ]
 
 consumer = KafkaConsumer(*topics, bootstrap_servers=settings.KAFKA_SERVER)
+
+def kafka_thread(handler):
+    for message in consumer:
+        handler(message.topic, message.value)
