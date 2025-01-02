@@ -9,5 +9,5 @@ def create_transaction(db: Session, transaction_in: FactTransactionCreate) -> An
     return transaction
 
 def update_multi_transactions(db: Session, transactions_in: List[FactTransactionUpdate]) -> Any:
-    transactions = crud.fact_transaction.update_multi(db, obj_in=transactions_in)
+    transactions = crud.fact_transaction.update_multi(db, objs_in=transactions_in)
     return transactions

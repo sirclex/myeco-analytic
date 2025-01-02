@@ -13,5 +13,5 @@ def create_debt(db: Session, debt_in: FactDebtCreate) -> Any:
     return debt
 
 def update_multi_debts(db: Session, debts_in: List[FactDebtUpdate]) -> Any:
-    debts = crud.fact_debt.update_multi(db, obj_in=debts_in)
+    debts = crud.fact_debt.update_multi(db, objs_in=debts_in)
     return debts
