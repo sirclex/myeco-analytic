@@ -1,4 +1,5 @@
 from typing import Any, List
+from datetime import datetime
 from sqlalchemy.orm import Session
 
 import crud
@@ -14,4 +15,8 @@ def update_multi_transactions(db: Session, transactions_in: List[FactTransaction
 
 def get_sum_transaction_by_month(db: Session) -> Any:
     result = crud.fact_transaction.get_sum_transaction_by_month(db)
+    return result
+
+def get_category_distributed_by_current_month(db: Session) -> Any:
+    result = crud.fact_transaction.get_distributed_by_category(db, datetime.now().month)
     return result

@@ -37,3 +37,15 @@ class TransactionSummaryResponse(BaseModel):
     month: int
     is_income: bool
     total: float
+
+    class Config:
+        from_attributes = True
+
+class DistributedResponse(BaseModel):
+    year: int
+    month: int
+    name: str
+    total: float
+
+    class Config:
+        from_attributes = True
