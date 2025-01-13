@@ -3,5 +3,5 @@ from schemas.dim_category import DimCategoryBase, DimCategoryCreate, DimCategory
 from schemas.dim_subcategory import DimSubcategoryBase, DimSubcategoryCreate, DimSubcategoryUpdate
 from schemas.dim_identity import DimIdentityBase, DimIdentityCreate, DimIdentityUpdate
 from schemas.dim_status import DimStatusBase, DimStatusCreate, DimStatusUpdate
-from schemas.fact_transaction import FactTransactionBase, FactTransactionCreate, FactTransactionUpdate, FactTransactionResponse
+from schemas.fact_transaction import FactTransactionBase, FactTransactionCreate, FactTransactionUpdate, FactTransactionResponse, TransactionSummaryResponse
 from schemas.fact_debt import FactDebtBase, FactDebtCreate, FactDebtUpdate, FactDebtResponse, PendingDebtResponse

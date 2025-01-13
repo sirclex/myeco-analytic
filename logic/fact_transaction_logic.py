@@ -11,3 +11,7 @@ def create_transaction(db: Session, transaction_in: FactTransactionCreate) -> An
 def update_multi_transactions(db: Session, transactions_in: List[FactTransactionUpdate]) -> Any:
     transactions = crud.fact_transaction.update_multi(db, objs_in=transactions_in)
     return transactions
+
+def get_sum_transaction_by_month(db: Session) -> Any:
+    result = crud.fact_transaction.get_sum_transaction_by_month(db)
+    return result
