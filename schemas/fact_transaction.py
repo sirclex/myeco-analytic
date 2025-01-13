@@ -32,7 +32,7 @@ class FactTransactionResponse(FactTransactionBase):
     class Config:
         from_attributes = True
 
-class TransactionSummaryResponse:
+class TransactionSummaryResponse(BaseModel):
     year: int
     month: int
     is_income: bool
