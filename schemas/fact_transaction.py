@@ -31,3 +31,9 @@ class FactTransactionResponse(FactTransactionBase):
     status: Optional[str]
     class Config:
         from_attributes = True
+
+class TransactionSummaryResponse(BaseModel):
+    year: int
+    month: int
+    is_income: bool
+    total: float
